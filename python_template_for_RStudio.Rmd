@@ -1,0 +1,62 @@
+---
+title: "Template"
+subtitle: "SUBTITLE"
+author: "AUTHORS"
+output:
+  html_document: 
+    df_print: paged
+    number_sections: yes
+    toc: yes
+    toc_float: true
+    toc_depth: 3
+    code_folding: show
+editor_options:
+  chunk_output_type: inline
+---
+
+> WARNING: this is not yet supported because the RStudio version required for interactive use of python in RMarkdown is not the version installed by binder.
+
+```{python}
+# setup
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+```
+
+# $\LaTeX$ Math
+
+This is just markdown that can include latex math.
+
+$$
+\begin{align}
+\dot{x} & = \sigma(y-x) \\
+\dot{y} & = \rho x - y - xz \\
+\dot{z} & = -\beta z + xy
+\end{align}
+$$
+
+# System Info
+
+```{python}
+import IPython
+print(IPython.sys_info())
+```
+
+# Data
+
+```{python}
+parabola = pd.DataFrame(np.arange(-20, 21), columns=list('x'))
+parabola['err'] = np.random.normal(size=len(parabola), scale=5)
+parabola['y'] = (parabola['x'] + parabola['err'])**2
+print(parabola)
+```
+
+# Plot
+
+```{python}
+parabola.plot.scatter(x = 'x', y = 'y')
+plt.show()
+```
+
+
