@@ -1,0 +1,51 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+~$*
+.Spotlight*
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# exclude R & Rstudio temp files
+*.utf8.md
+*.knit.md
+.Rproj.user
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+.Rbuildignore
+packrat/lib*/
+packrat/src/
+
+# exclude Python and Jupyter temp files
+.ipynb_checkpoints
+*.pyc
+
+# exclude authentication tokens
+.httr-oauth
+
+# exclude cache
+*cache/*
+
+# exclude output files
+*.pdf
+*.html
+*.png
+*.jpeg
+*.jpg
+*.pptx
+*.docx
+*.xlsx
+*.csv
+
+# allow all files in data
+!data/*
+
+# allow all files in documents
+!documents/*
+
+# allow rendered html files in docs
+!docs/**/*.html
