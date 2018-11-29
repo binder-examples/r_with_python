@@ -1,5 +1,5 @@
 ---
-title: "Template"
+title: "Example"
 subtitle: "SUBTITLE"
 author: "AUTHORS"
 output:
@@ -13,16 +13,6 @@ output:
 editor_options:
   chunk_output_type: inline
 ---
-
-> WARNING: this is not yet supported because the RStudio version required for interactive use of python in RMarkdown is not the version installed by binder.
-
-```{python}
-# setup
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import os
-```
 
 # $\LaTeX$ Math
 
@@ -46,17 +36,25 @@ print(IPython.sys_info())
 # Data
 
 ```{python}
-parabola = pd.DataFrame(np.arange(-20, 21), columns=list('x'))
-parabola['err'] = np.random.normal(size=len(parabola), scale=5)
-parabola['y'] = (parabola['x'] + parabola['err'])**2
-print(parabola)
+import pandas as pd
+import numpy as np
+curve = pd.DataFrame(np.arange(0.0, 2.0, 0.01), columns=list('t'))
+curve['x'] = 1 + np.sin(2 * np.pi * curve['t'])
+```
+
+```{r}
+# access python variable via reticulate - requires RStudio 1.2+ to work interactively
+library(reticulate)
+py$curve
 ```
 
 # Plot
 
-```{python}
-parabola.plot.scatter(x = 'x', y = 'y')
-plt.show()
+```{r, fig.width=8, fig.height=4}
+# python plots (e.g. matplotlib) require RStudio 1.2+ for proper rendering
+# using reticulate and ggplot instead (will work only in knitted document)
+ggplot(py$curve) +
+  aes(x = t, y = x) + 
+  geom_line() + 
+  theme_bw()
 ```
-
-

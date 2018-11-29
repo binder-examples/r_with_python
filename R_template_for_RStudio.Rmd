@@ -1,5 +1,5 @@
 ---
-title: "Template"
+title: "Example"
 subtitle: "SUBTITLE"
 author: "AUTHORS"
 date: "`r format(Sys.Date(), '%d %b %Y')`"
@@ -14,6 +14,18 @@ output:
 editor_options:
   chunk_output_type: inline
 ---
+
+# $\LaTeX$ Math
+
+This is just markdown that can include latex math.
+
+$$
+\begin{align}
+\dot{x} & = \sigma(y-x) \\
+\dot{y} & = \rho x - y - xz \\
+\dot{z} & = -\beta z + xy
+\end{align}
+$$
 
 # System Info
 
