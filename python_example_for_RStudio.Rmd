@@ -53,6 +53,7 @@ py$curve
 ```{r, fig.width=8, fig.height=4}
 # python plots (e.g. matplotlib) require RStudio 1.2+ for proper rendering
 # using reticulate and ggplot instead (will work only in knitted document)
+library(ggplot2)
 ggplot(py$curve) +
   aes(x = t, y = x) + 
   geom_line() + 
