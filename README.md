@@ -1,13 +1,22 @@
 # R + Python Binder Example
 
-Minimal working example for a binder with both R and Python Jupyter and RMarkdown notebooks.
+Minimal working example for a binder with both R and Python Jupyter and RMarkdown notebooks. 
 
  - Launch in Jupyter Lab: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/KopfLab/R_python_binder_example/master?urlpath=lab)
  - Launch in RStudio: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/KopfLab/R_python_binder_example/master?urlpath=rstudio)
 
+Example files included:
+
+ - `python_example_for_Jupyter.ipynb` - Notebook file using a python kernel for working in Jupyter
+ - `R_example_for_Jupyter.ipynb` - Notebook file using an R kernel for working in Jupyter
+ - `python_example_for_RStudio.Rmd` - RMarkdown file with python code chunks for working in RStudio
+ - `R_example_for_RStudio.Rmd` - RMarkdown file with R code chunkcs for working in RStudio
+
+Note: to mix R and python in a single Jupyter notebook, use cell magic as demonstrated in the [multi-language-demo](https://github.com/binder-examples/multi-language-demo) binder examples. To mix R and python in a single RMarkdown file (and exchange information between them), make use of [reticulate](https://rstudio.github.io/reticulate/). The latter requires [RStudio 1.2+](https://www.rstudio.com/products/rstudio/download/preview/) to work interactively, which is not yet installed as the default binder version (i.e. interactive python and python plots will not yet work in RMarkdown and the above example file uses reticulate for plotting in the knitted file).
+
 ## Binder Setup
 
-Modify the files in the `binder` sub-directory to specify required dependencies for R and python. Binder will generate a docker image for your repository after every change to the repo and then will re-use the docker image on subsequent launches. This means that the first time you launch binder for the latest version of your branch, it may take some time to launch but will be fast for everyone else aftewards. Switching between `RStudio` vs. `Jupyter Lab` as the IDE is done easily by changing the binder link as described below.
+Modify the files in the `binder` sub-directory to specify required dependencies for R and python. Binder will generate a docker image for your repository after every change to the repo and then will re-use the docker image on subsequent launches. This means that the first time you launch binder for the latest version of your branch, it may take some time to launch (especially with a lot of R dependencies which are all compiled from source) but will be fast for everyone else afterwards. Switching between `RStudio` vs. `Jupyter Lab` as the IDE is accomplished easily by changing the binder link as described below - the required dependencies for both are automatically installed and do not need to be explicitly listed in the respective configuration files.
 
 **Important**: binder will *only* work for public repositories. If your repository is private, you will have to make it public in the repository settings before you can launch it in binder.
 
