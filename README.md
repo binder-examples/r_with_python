@@ -2,8 +2,8 @@
 
 This repo builds on the [r binder](https://github.com/binder-examples/r) and [jupyter lab binder](https://github.com/binder-examples/jupyterlab) and is complementary to the [multi-language-demo binder](https://github.com/binder-examples/multi-language-demo) with examples on using both R and python in both Jupyter Lab and RStudio.
 
- - Launch in Jupyter Lab: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/binder-examples/r_with_python/master?urlpath=lab)
- - Launch in RStudio: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/KopfLab/binder-examples/r_with_python/master?urlpath=rstudio)
+ - Launch in Jupyter Lab: [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/binder-examples/r_with_python/master?urlpath=lab)
+ - Launch in RStudio: [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/binder-examples/r_with_python/master?urlpath=rstudio)
 
 Example files included:
 
@@ -33,12 +33,10 @@ Modify the files in the `binder` sub-directory to specify required dependencies 
 
 ### Jupyter Lab
 
- - modify the following link to launch your repo in an RStudio binder (`USER`, `REPO`, `BRANCH`): `http://beta.mybinder.org/v2/gh/USER/REPO/BRANCH?urlpath=lab`
- - modify the following markdown code to create a launch badge like the one at the top this README: `[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/USER/REPO/BRANCH?urlpath=lab)`
+ - modify the following link to launch your repo in an RStudio binder (`USER`, `REPO`, `BRANCH`): `http://mybinder.org/v2/gh/USER/REPO/BRANCH?urlpath=lab`
+ - modify the following markdown code to create a launch badge like the one at the top this README: `[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/USER/REPO/BRANCH?urlpath=lab)`
 
 ### RStudio
 
- - modify the following link to launch your repo in an RStudio binder (`USER`, `REPO`, `BRANCH`): `http://beta.mybinder.org/v2/gh/USER/REPO/BRANCH?urlpath=rstudio`
- - modify the following markdown code to create a launch badge like the one at the top of this README: `[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/USER/REPO/BRANCH?urlpath=rstudio)`
-
-
+ - modify the following link to launch your repo in an RStudio binder (`USER`, `REPO`, `BRANCH`): `http://mybinder.org/v2/gh/USER/REPO/BRANCH?urlpath=rstudio`
+ - modify the following markdown code to create a launch badge like the one at the top of this README: `[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/USER/REPO/BRANCH?urlpath=rstudio)`
